@@ -40,4 +40,11 @@
             return b.slice(0, 2) + a.slice(2) + " " + a.slice(0, 2) + b.slice(2);
         }
 
+        // EX n3 FixStart
+
+        function fixStart(a) {
+            var c = s.charAt(0);
+            return c + s.slice(1).replace(new RegExp(c, 'g'), '*');
+        }
+
     </script>
