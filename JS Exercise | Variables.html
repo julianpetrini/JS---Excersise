@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -8,43 +9,87 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
 </head>
+
 <body>
-    
-<!--Exercises: Variables
-The Fortune Teller
-Why pay a fortune teller when you can just program your fortune yourself?
 
-Store the following into variables: number of children, partner's name, geographic location, job title.
-Output your fortune to the screen like so: "You will be a X in Y, and married to Z with N kids."-->
-<script>
-    //EX n1
-    let childrenNumber=2;
-    let partnersName="Tu";
-    let geoLoc="Switzerland";
-    let jobTit="Web developer";
+    <!--Exercises: Variables-->
 
-    let future = "You will have " + childrenNumber + " childs and will marry " + partnersName + " and will live happy in " + geoLoc + " and work as a " +jobTit; 
+    <script>
 
-    console.log(future);
+        //EX n1 The Fortune Teller
 
-    //EX n2
-    let bYear=1987;
-    let fYear=2032;
+        let childrenNumber = 2;
+        let partnersName = "Tu";
+        let geoLoc = "Switzerland";
+        let jobTit = "Web developer";
 
-    let fAge=fYear-bYear;
-    let fAge2=fYear-bYear-1;
+        let future = "You will have " + childrenNumber + " childs and will marry " + partnersName + " and will live happy in " + geoLoc + " and work as a " + jobTit;
 
-    let ageCalculator = "I will be " + fAge + " or " + fAge2 + " in the year " + fYear + " because i was born in " + bYear;
+        console.log(future);
 
-    console.log(ageCalculator);
+        //EX n2 The Age Calculator
 
-    //EX n3
-    
+        let bYear = 1987;
+        let fYear = 2032;
+
+        let fAge = fYear - bYear;
+        let fAge2 = fYear - bYear - 1;
+
+        let ageCalculator = "I will be " + fAge + " or " + fAge2 + " in the year " + fYear + " because i was born in " + bYear;
+
+        console.log(ageCalculator);
+
+        //EX n3 The Lifetime Supply Calculator
+
+        let age = 34;
+        let mAge = 120;
+        let dailySnack = 3;
+
+        let lifeSnacks = (mAge - age) * 365 * dailySnack;
+
+        console.log("You will need " + lifeSnacks + " to last you until the ripe old age of " + mAge);
+
+        //EX n 4 The Geometrizer
+
+        let radius = 3;
+        let PI = 3.141592;
+        let circumference = (2 * PI) * radius
+
+        console.log("The circumference is " + circumference);
+
+        let area = PI * radius ** 2;
+
+        console.log("The area of a circle is " + area);
+
+        //EX n 5 The Temperature Converter
+
+        let celsius = 25;
+
+        let fahrenheitFromCelsius = (celsius/5) * 9 + 32 ;
+
+        let fahVar = 120;
+
+        let celsiusFromFahrenheit = (fahVar*5) / 9 - 32 ;
+
+        console.log(fahrenheitFromCelsius + " F " + celsiusFromFahrenheit + " C ")
 
 
 
-</script>
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
 
 
 </body>
+
 </html>
