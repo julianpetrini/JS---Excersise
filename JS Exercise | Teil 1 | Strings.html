@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>JS PRACTICE Strings</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+
+    <!--Teil 1 | Exercises: Strings-->
+
+    <script>
+
+        // EX n1 DrEvil
+        function DrEvil(amount) {
+            if (amount == 1000000) {
+                return amount + " dollars (pinky)";
+            } else {
+                return amount + " dollars";
+            }
+        }
+        console.log(DrEvil(7898));
+
+
+        // EX n2 MixUp
+        function mixUp(w1, w2) {
+            let mix = w2 + w1;
+            return console.log(mix);
+        }
+        console.log(mixUp("mundo ", "hola"))
+
+        //NEED TO TAKE EXTRA ATTENTION TO THIS
+
+        function mixUp2(a, b) {
+            return b.slice(0, 2) + a.slice(2) + " " + a.slice(0, 2) + b.slice(2);
+        }
+
+    </script>

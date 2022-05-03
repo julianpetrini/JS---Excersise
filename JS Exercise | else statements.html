@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>JS IF/ELSE Statements</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+
+    <!--Exercises: IF / Else statements -->
+
+    <script>
+        // EX n1 What number's bigger?
+        function greaterNum(n1, n2) {
+            if (n1 > n2) {
+                console.log("The n1 is bigger than n2");
+            }
+            else {
+                console.log("The n2 is bigger thank n1");
+            }
+
+        }
+
+        console.log(greaterNum(55, 110));
+
+        // EX n2 The World Translator
+
+        function helloWorld(language) {
+
+            if (language == 'english' || 'en') {
+                return console.log("hello world")
+            }
+            else if (language == 'spanish' || 'es') {
+                return console.log("hola mundo")
+            }
+            else if (language == 'deutsch' || 'de') {
+                return console.log("Hallo Welt")
+            }
+            else {
+                return console.log("please select a language")
+            }
+        }
+
+        console.log(helloWorld('de'));
+
+        // EX n3 The Grade Assigner
+
+        function assignGrade(score) {
+            if (score <= 5) {
+                return console.log("F")
+            }
+            else if (score <= 25) {
+                return console.log("D")
+            }
+            else if (score <= 50){
+                return console.log("C")
+            }
+            else if (score <= 100) {
+                return console.log("B")
+            }
+            else{
+                return console.log("A")
+            }
+        }
+
+        console.log(assignGrade(7));
+
+        // EX n4 The Pluralizer
+
+        function pluralize (noun, number){
+            if (number !=1 && noun != 'sheep' && noun != 'geese'){
+            return number + "" + noun + "s"
+        }
+            else{
+                return number + "" + noun;
+            }
+        }
+
+        console.log("I have " + pluralize("dog",1));
+        console.log("I would like to have " + pluralize("cat",2));
+
+
+    </script>

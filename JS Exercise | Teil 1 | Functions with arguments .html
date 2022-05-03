@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>JS PRACTICE Functions with arguments </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+
+    <!--Teil 1 | Exercises: Functions-->
+
+    <script>
+
+        // EX n1 The Fortune Teller
+        function tellFortune(nchildren, pname, geoLoc, jtitle) {
+            let future = "You will have " + nchildren + " children, and marry " + pname + " living in " + geoLoc + " working as a " + jtitle;
+            console.log(future)
+        }
+
+        console.log(tellFortune(2, "Tu", "Switzerland", "web developer"));
+
+        // EX n2 The Puppy Age Calculator
+
+        function calculateDogAge(age) {
+            dogAge = age * 7;
+            console.log("Your dog is" + dogAge + " in dog years")
+        }
+
+        console.log(calculateDogAge(12));
+        console.log(calculateDogAge(8));
+        console.log(calculateDogAge(3));
+
+        // Ex n3 The Lifetime Supply Calculator
+
+        function calculateSupply(age, amountPerDay) {
+            const altAge = 120;
+            let nowAge = 34;
+            let dAge = altAge - age;
+            let dAgeDays = dAge * 365
+            let foodDageDays = amountPerDay * dAgeDays
+
+            console.log("you will need" + foodDageDays + " of snacks until you die at " + altAge)
+        }
+
+        console.log(calculateSupply(34, 2));
+
+        // Ex n4 The Geometrizer
+
+        function calcCircumfrence(radius) {
+            let circumference = (2 * Math.PI) * radius
+            console.log("The circumference is " + circumference);
+        }
+
+        function calcArea(radius) {
+            let area = Math.PI * radius ** 2
+            console.log("The area is " + area)
+        }
+
+        console.log(calcCircumfrence(4));
+        console.log(calcArea(3))
+
+        // Ex n5 The Temperature Converter
+
+        function celsiusToFahrenheit(celsius) {
+            let fah = (celsius * 9) / 5 + 32
+            console.log("It is " + fah + " F of temperature")
+        }
+
+        function fahrenheitToCelsius(fahrenheit) {
+            let cel = ((fahrenheit - 32) * 5) / 9;
+            console.log("It is " + cel + " C of temperature")
+        }
+
+        console.log(celsiusToFahrenheit(28));
+        console.log(fahrenheitToCelsius(110));
+
+    </script>
