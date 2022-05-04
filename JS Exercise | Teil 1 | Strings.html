@@ -14,6 +14,8 @@
 
     <!--Teil 1 | Exercises: Strings-->
 
+    <!--https://www.teaching-materials.org/javascript/exercises/strings-->
+
     <script>
 
         // EX n1 DrEvil
@@ -25,7 +27,6 @@
             }
         }
         console.log(DrEvil(7898));
-
 
         // EX n2 MixUp
         function mixUp(w1, w2) {
@@ -45,6 +46,64 @@
         function fixStart(a) {
             var c = s.charAt(0);
             return c + s.slice(1).replace(new RegExp(c, 'g'), '*');
+        }
+
+        // EX n4 Verbing 
+
+        function Verbing(word) {
+
+            if (word.length >= 3 && word.endsWith("ing")) {
+                return word + "ly";
+            }
+            if (word.length >= 3) {
+                return word + "ing";
+            }
+            if (word.length < 3) {
+                return word;
+            }
+
+        }
+
+        console.log(Verbing("run"));
+        console.log(Verbing("read"));
+        console.log(Verbing("dance"));
+
+        //THIS IS THE SAME EXCERSISE BUT WITH THE SOLUTION OF THE PAGE. PAY ATTENTION HOW THEY USE ".slice"//
+
+        function prueba(word) {
+            if (word.length < 3)
+                return word;
+
+            if (word.slice(-3) == 'ing') {
+                return word + 'ly';
+
+            } else {
+                return word + 'ing';
+            }
+        }
+
+        console.log(prueba("run"));
+        console.log(prueba("read"));
+        console.log(prueba("dance"));
+
+        // EX n5 Not Bad
+
+        function notBad(sentence) {
+
+            if (sentence.match("not") && sentence.match("bad")) {
+                sentence.replace("good")
+            }
+
+        }
+        console.log(notBad("This is not that bad"))
+
+        // SOLUTION OF THE PAGE . TAKE EXTRA ATTENTION AT THE USE OF INDEX
+
+        function notBad(sentence) {
+            var notIndex = sentence.indexOf('not');
+            var badIndex = sentence.indexOf('bad');
+            if (notIndex == -1 || badIndex == -1 || badIndex < notIndex) return sentence;
+            return sentence.slice(0, notIndex) + 'good' + sentence.slice(badIndex + 3);
         }
 
     </script>
