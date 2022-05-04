@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>JS IF/Loops</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+
+    <!--Exercises: Loops -->
+
+    <!--https://www.teaching-materials.org/javascript/exercises/forloops-->
+
+    <script>
+
+        // EX n1 The even/odd reporter
+
+        for (i = 0; i < 21; i++) {
+            if (i % 2 === 0) {
+                console.log("The number " + i + " is even");
+            }
+            else {
+                console.log("The number " + i + " is not even");
+            }
+        }
+
+        // EX n2 Multiplication Tables
+
+        for (i = 0; i <= 10; i++) {
+            let multi = 9;
+            let result = i * multi
+            console.log(multi + ' * ' + i + ' = ' + result)
+        }
+
+        // THIS IS THE SOLUTION OF THE PAGE . TAKE SPECIAL ATTENTION HOW THEY USED FOR INTO A FOR 
+
+        for (var multiplier = 0; multiplier <= 10; multiplier++) {
+            for (var i = 0; i <= 10; i++) {
+                var result = multiplier * i;
+                console.log(multiplier + ' * ' + i + ' = ' + result);
+            }
+        }
+
+        // Ex n3 The Grade Assigner
+
+        function assignGrade(score) {
+            if (score == 100) {
+                return "A"
+            }
+            else if (score <= 25) {
+                return "D"
+            }
+            else if (score <= 50) {
+                return "C"
+            }
+            else if (score <= 99) {
+                return "B"
+            }
+            else {
+                return "F"
+            }
+        }
+
+        for (i = 80; i <= 100; i++) {
+            console.log("For " + i + " you got a " + assignGrade(i))
+        }
+
+    </script>
+</body>
+
+</html>

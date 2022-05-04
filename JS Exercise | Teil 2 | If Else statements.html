@@ -14,8 +14,12 @@
 
     <!--Exercises: IF / Else statements -->
 
+    <!--https://www.teaching-materials.org/javascript/exercises/ifelse-->
+
     <script>
+
         // EX n1 What number's bigger?
+
         function greaterNum(n1, n2) {
             if (n1 > n2) {
                 console.log("The n1 is bigger than n2");
@@ -57,13 +61,13 @@
             else if (score <= 25) {
                 return console.log("D")
             }
-            else if (score <= 50){
+            else if (score <= 50) {
                 return console.log("C")
             }
             else if (score <= 100) {
                 return console.log("B")
             }
-            else{
+            else {
                 return console.log("A")
             }
         }
@@ -72,17 +76,18 @@
 
         // EX n4 The Pluralizer
 
-        function pluralize (noun, number){
-            if (number !=1 && noun != 'sheep' && noun != 'geese'){
-            return number + "" + noun + "s"
-        }
-            else{
+        function pluralize(noun, number) {
+            if (number != 1 && noun != 'sheep' && noun != 'geese') {
+                return number + "" + noun + "s"
+            }
+            else {
                 return number + "" + noun;
             }
         }
 
-        console.log("I have " + pluralize("dog",1));
-        console.log("I would like to have " + pluralize("cat",2));
-
+        console.log("I have " + pluralize("dog", 1));
+        console.log("I would like to have " + pluralize("cat", 2));
 
     </script>
+</body>
+</html>
