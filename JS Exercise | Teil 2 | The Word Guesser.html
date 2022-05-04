@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>JS IF/Loops</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+
+    <!--Exercises: The world Guesser -->
+
+    <!--https://www.teaching-materials.org/javascript/exercises/wordguesser-->
+
+    <script>
+
+        // Ex The world Guesser // I was thinking about it the opposite way. 
+
+        function guessLetter(guessedLetter) {
+            let separado = guessedLetter.split("");
+            console.log(separado)
+        }
+        console.log(guessLetter("frutas"));
+
+        // This is the solution of the web. Take special attention
+
+        var wordLetters = ['G', 'O', 'A', 'T'];
+        var guessedLetters = ['_', '_', '_', '_'];
+
+        function guessLetter(letter) {
+            var goodGuess = false;
+            var moreToGuess = false;
+            for (var i = 0; i < wordLetters.length; i++) {
+                if (wordLetters[i] == letter) {
+                    guessedLetters[i] = letter;
+                    goodGuess = true;
+                }
+                if (guessedLetters[i] == '_') {
+                    moreToGuess = true;
+                }
+            }
+            if (goodGuess) {
+                console.log('Yay, you found a letter!');
+                console.log(guessedLetters.join(''));
+                if (!moreToGuess) {
+                    console.log('YOU WON!');
+                }
+            } else {
+                console.log('Oh noes, thats not right!');
+            }
+        }
+
+        guessLetter('G');
+        guessLetter('I');
+        guessLetter('O');
+        guessLetter('A');
+        guessLetter('T');
+
+    </script>
+
+</body>
