@@ -25,6 +25,7 @@
             title: "Salmon al verdeo",
             servings: 3,
             ingredients: ["salmon", "lemon", "mustard", "cream"]
+
         };
 
         console.log(receta.title);
@@ -36,13 +37,63 @@
 
         // EX n2 The Reading List
 
-        const librosLeidos ={
-            title=
-            author=
-            alreadyRead=true
+        const librosLeidos = {
+
+            book1: [title = "The richest man in babylon", author = "George Clason", alreadyRead = true],
+            book2: [title = "Der alquemist", "Mi vision del mundo", author = "Paulo Coehlo", alreadyRead = true],
+            book3: [title = "Mi vision del mundo", author = "Albert Einstein", alreadyRead = true],
+            book4: [tittle = "HTML & CSS", author = "Jon Duckett", alreadyRead = false]
         }
 
+        // This was how I though about it but it gives undefined result.
 
+        function libros(libro) {
+
+            for (let i = 0; i < i.length; i++) {
+
+                let book = librosLeidos[book + i]
+
+                if (libro == book && book.alreadyRead == true) {
+                    console.log("you already read this one")
+                }
+
+                if (libro == book && alreadyRead == false) {
+                    console.log("It is on the list, but you didn't read it yet")
+                }
+
+            }
+        }
+
+        console.log(librosLeidos);
+        console.log(libros("HTML & CSS"));
+
+        //console.log("the book" + librosLeidos.book1.title + " has as its author " + librosLeidos.book1.author)
+        //console.log("the book" + librosLeidos.book2.title + " has as its author " + librosLeidos.book2.author)
+        //console.log("the book" + librosLeidos.book3.title + " has as its author " + librosLeidos.book3.author)
+
+        // This is the answer of the web. Check out the differences
+
+        var books = [
+            {
+                title: 'The Design of EveryDay Things',
+                author: 'Don Norman',
+                alreadyRead: false
+            },
+            {
+                title: 'The Most Human Human',
+                author: 'Brian Christian',
+                alreadyRead: true
+            }];
+
+        for (var i = 0; i < books.length; i++) {
+            var book = books[i];
+            var bookInfo = book.title + '" by ' + book.author;
+            if (book.alreadyRead) {
+                console.log('You already read "' + bookInfo);
+            } else {
+                console.log('You still need to read "' + bookInfo);
+            }
+        }
 
     </script>
 </body>
