@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>JS /Function with object as parameter </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+
+    <!--Exercises: The Cash Register  -->
+
+    <!--https://www.teaching-materials.org/javascript/exercises/cashregister-->
+
+    <script>
+
+        //CHECK IT OUT. Still to understand ...
+        // Input
+        const cartForParty = {
+            banana: "1.25",
+            handkerchief: ".99",
+            Tshirt: "25.01",
+            apple: "0.60",
+            nalgene: "10.34",
+            proteinShake: "22.36"
+        };
+
+        function cashRegister(cart) {
+            let sum = 0;
+            let items = Object.keys(cart); // array of items by key   
+
+            for (var i = 0; i < items.length; i++) {
+                var itemName = items[i]; // get the name of the key for the item
+                var itemPrice = cart[itemName]; // get the price for the item
+                sum += Number.parseFloat(itemPrice); // convert the price to a float and add it to the sum
+            }
+
+            return sum;
+            console.log(items);
+        }
+        // Output
+
+        cashRegister(cartForParty); // 60.55
+
+    </script>
+</body>
