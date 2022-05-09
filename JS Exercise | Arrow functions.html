@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>JS / Arrow functions => </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen'>
+</head>
+
+<body>
+
+    <!--Exercises: Exercise with Arrow Function and Array.filter()  -->
+
+    <!--https://docs.google.com/presentation/d/1Suz8TWaxwrtRNHDgIiAD4YB1q8MfTgBm/edit#slide=id.g128e7766fc1_0_1-->
+
+    <h1 id="display">"This will change"</h1>
+
+    <p id="display"></p>
+
+    <script>
+
+        function display(message, arr) {
+            // Caution: This function needs a <p id="display"></p> in the HTML page.
+            let element = document.getElementById('display');
+            element.innerHTML = prettyHTML(message, arr);
+        }
+
+        function prettyHTML(message, arr) {
+            // If there are no details given, then just return the message.
+            if (!arr || arr.length === 0) return message;
+
+            // Add the message to the list first.
+            let list = [];
+            list.push('<b>' + message + '</b>');
+
+            let indent = '&nbsp;&nbsp;&nbsp;';
+
+            for (let i = 0; i < arr.length; i++) {
+                let obj = arr[i];
+
+                // Add a small header with the index number.
+                list.push(`${i}:`);
+
+                for (let key in obj) {
+                    let value = obj[key];
+
+                    // Add a key = value line.
+                    if (typeof value === 'string') {
+                        list.push(`${indent}${key} = "${value}"`);
+                    }
+                    else {
+                        list.push(`${indent}${key} = ${value}`);
+                    }
+                }
+            }
+
+            return list.join('<br>');
+        }
+
+        function execute() {
+
+            let cities = [
+                { name: 'Los Angeles', population: 3792624 },
+                { name: 'New York', population: 8175133 },
+                { name: 'Chicago', population: 2695598 },
+                { name: 'Houston', population: 2099451 },
+                { name: 'Philadelphia', population: 1526006 }
+            ];
+
+            let bigCities = cities.filter((city) => city.population < 3000000);
+            display("Big Cities", bigCities);
+        }
+
+        execute();
+
+    </script>
+
+</body>

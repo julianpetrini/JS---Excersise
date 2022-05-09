@@ -21,27 +21,32 @@
         //CHECK IT OUT. Still to understand ...
         // Input
         const cartForParty = {
+
             banana: "1.25",
             handkerchief: ".99",
             Tshirt: "25.01",
             apple: "0.60",
             nalgene: "10.34",
             proteinShake: "22.36"
+
         };
 
         function cashRegister(cart) {
+
             let sum = 0;
             let items = Object.keys(cart); // array of items by key   
+            let prices = Object.values(cart); //array of prices by value
 
             for (var i = 0; i < items.length; i++) {
                 var itemName = items[i]; // get the name of the key for the item
-                var itemPrice = cart[itemName]; // get the price for the item
+                var itemPrice = prices; // get the price for the item
                 sum += Number.parseFloat(itemPrice); // convert the price to a float and add it to the sum
             }
 
             return sum;
             console.log(items);
         }
+
         // Output
 
         cashRegister(cartForParty); // 60.55
